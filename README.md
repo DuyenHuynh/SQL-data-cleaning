@@ -18,13 +18,13 @@ Let's inspect the initial rows to analyze the data in its original format.
 # Copy the table
 ## Create a new table for cleaning
 Let's generate a new table where we can manipulate and restructure the data without modifying the original dataset.
-CREATE TABLE club_member_info_cleaned (
-	full_name VARCHAR(50),
-	age INTEGER,
-	martial_status VARCHAR(50),
-	email VARCHAR(50),
-	phone VARCHAR(50),
-	full_address VARCHAR(50),
-	job_title VARCHAR(50),
-	membership_date VARCHAR(50)
-);
+	CREATE TABLE club_member_info_cleaned (
+		full_name VARCHAR(50),
+		age INTEGER,
+		martial_status VARCHAR(50),
+		email VARCHAR(50),
+		phone VARCHAR(50),
+		full_address VARCHAR(50),
+		job_title VARCHAR(50),
+		membership_date VARCHAR(50)
+	);
