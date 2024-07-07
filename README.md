@@ -60,4 +60,4 @@ Then replace those ones with NULL:
 
 		UPDATE club_member_info_cleaned SET age = 'NULL' WHERE age < 19 OR age > 70 OR age IS NULL;
 
-The final file is attached below.
+The cleaning database in db format is located in the file club_member_info_cleaned.db.
