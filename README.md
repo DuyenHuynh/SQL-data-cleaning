@@ -37,3 +37,7 @@ Let's generate a new table where we can manipulate and restructure the data with
 
 # Cleaning
 ## Full name cleaning
+There are some issues with the original data, so some cleaning solutions need to be done like below:
+- full_name column: Remove leading and trailing spaces, and converse all strings to upper-case
+- age: Replace age that out of realistic range with NULL
+
