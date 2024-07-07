@@ -36,8 +36,17 @@ Let's generate a new table where we can manipulate and restructure the data with
 		SELECT*FROM club_member_info ;
 
 # Cleaning
-## Full name cleaning
+
 There are some issues with the original data, so some cleaning solutions need to be done like below:
 - full_name column: Remove leading and trailing spaces, and converse all strings to upper-case
-- age: Replace age that out of realistic range with NULL
+- age: Replace values of age that are out of realistic range with NULL
+
+## Full name cleaning
+To remove spaces:
+
+		UPDATE club_member_info_cleaned SET full_name = TRIM(full_name);
+
+To upper strings:
+
+		UPDATE club_member_info_cleaned SET full_name = UPPER(full_name);
 
