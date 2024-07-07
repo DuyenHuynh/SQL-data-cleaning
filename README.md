@@ -29,3 +29,8 @@ Let's generate a new table where we can manipulate and restructure the data with
 			job_title VARCHAR(50),
 			membership_date VARCHAR(50)
 		);
+
+## Copy all values from original table
+
+		INSERT INTO club_member_info_cleaned
+		SELECT*FROM club_member_info ;
