@@ -50,3 +50,14 @@ To upper strings:
 
 		UPDATE club_member_info_cleaned SET full_name = UPPER(full_name);
 
+## Age cleaning
+To check the number of age values that are not eligible:
+
+		SELECT COUNT(*) FROM club_member_info_cleaned WHERE age < 19 OR age > 70 OR age IS NULL;
+
+The result = 34;
+Then replace those ones with NULL:
+
+		UPDATE club_member_info_cleaned SET age = 'NULL' WHERE age < 19 OR age > 70 OR age IS NULL;
+
+The final file is attached below.
