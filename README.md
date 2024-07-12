@@ -64,7 +64,8 @@ The cleaning database is located in the file club_member.db.
 
 # Delete duplicates
 When discovering deeply the database, there are some duplicated members checked by this query:
-		SELECT email, COUNT(email) AS number_of_email  FROM club_member_info_cleaned GROUP BY email ORDER BY number_of_email DESC LIMIT 10;
+		
+  		SELECT email, COUNT(email) AS number_of_email  FROM club_member_info_cleaned GROUP BY email ORDER BY number_of_email DESC LIMIT 10;
 
 |email|number_of_email|
 |-----|---------------|
