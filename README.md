@@ -61,3 +61,23 @@ Then replace those ones with NULL:
 		UPDATE club_member_info_cleaned SET age = 'NULL' WHERE age < 19 OR age > 70 OR age IS NULL;
 
 The cleaning database is located in the file club_member.db.
+
+# Delete duplicates
+When discovering deeply the database, there are some duplicated members checked by this query:
+		SELECT email, COUNT(email) AS number_of_email  FROM club_member_info_cleaned GROUP BY email ORDER BY number_of_email DESC LIMIT 10;
+
+|email|number_of_email|
+|-----|---------------|
+|ehuxterm0@marketwatch.com|3|
+|tdunkersley8u@dedecms.com|2|
+|slamble81@amazon.co.uk|2|
+|omaccaughen1o@naver.com|2|
+|nfilliskirkd5@newsvine.com|2|
+|mmorralleemj@wordpress.com|2|
+|hbradenri@freewebs.com|2|
+|greglar4r@answers.com|2|
+|gprewettfl@mac.com|2|
+|zworthyem@oaic.gov.au|1|
+
+
+
